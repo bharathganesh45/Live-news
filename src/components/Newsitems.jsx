@@ -25,7 +25,7 @@ export default class Newsitems extends Component {
               <p>By : {author?author:"Anonymous"}</p>
               <hr />
               <p>Published At : {date}</p>
-              <a href="" className="btn btn-link btn-light">Read More</a>    
+              <a href={this.props.url} className="btn btn-link btn-light">Read More</a>    
         </div>
     </div>
 

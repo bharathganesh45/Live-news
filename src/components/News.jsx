@@ -211,11 +211,11 @@ export default class News extends Component {
   // DOM Manipulations: Directly interacting with the DOM, like integrating with third-party libraries that manipulate the DOM.
 
   async componentDidMount() {
-     {
+     
        this.setState({
          loading: true,
        });
-     }
+     
     let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=9eeaaad1825145829d85fdae8dc843c0&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
 
     let data = await fetch(url);
@@ -229,11 +229,11 @@ export default class News extends Component {
   }
 
   handleNext = async () => {
-     {
+     
        this.setState({
          loading: true,
        });
-     }
+     
 
     let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=9eeaaad1825145829d85fdae8dc843c0&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
     let data = await fetch(url);
@@ -247,11 +247,11 @@ export default class News extends Component {
   };
 
   handlePrev = async () => {
-     {
+     
        this.setState({
          loading: true,
        });
-     }
+     
 
     let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=9eeaaad1825145829d85fdae8dc843c0&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
     let data = await fetch(url);
